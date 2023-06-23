@@ -1,6 +1,8 @@
 import React from 'react';
 import { RiStarFill, RiStarHalfFill, RiPhoneFill } from 'react-icons/ri';
 import { FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { RiMapPin2Fill } from 'react-icons/ri';
+// import { FaMapMarker } from 'react-icons/fa';
 import { BsQuote } from 'react-icons/bs';
 
 function NewsLetter() {
@@ -173,7 +175,7 @@ const Outlets = () => {
       </p>*/}
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 h-max md:h-72 '>
         <div
-          className=' flex justify-center items-center space-y-2 p-5  rounded-md shadow-2xl'
+          className='   space-y-2 p-5  rounded-md shadow-2xl'
           style={{
             backgroundImage:
               'url("https://lh3.googleusercontent.com/p/AF1QipMLEnk0MYFn9tcAINhNpWSNcEHzQkPD_2YmFMo8=s680-w680-h510")',
@@ -207,13 +209,13 @@ const Outlets = () => {
           </div>
         </div>
         <div
-          className='  flex justify-center items-center p-5  rounded-md shadow-2xl'
-          style={{
-            backgroundImage:
-              'url("https://hyperlocalcd2.azureedge.net/-/media/images/feature/nexa/site-specific-global-content/r/rks-motors/rks-motors-jubilee/content-with-image/homepage-aboutus_rks_nexa_jublihills.ashx?modified=20181122052457")',
-          }}
+          className='  flex justify-center items-center  relative  '
+          // style={{
+          //   backgroundImage:
+          //     'url("https://hyperlocalcd2.azureedge.net/-/media/images/feature/nexa/site-specific-global-content/r/rks-motors/rks-motors-jubilee/content-with-image/homepage-aboutus_rks_nexa_jublihills.ashx?modified=20181122052457")',
+          // }}
         >
-          <div className='bg-[#000000f4] text-white p-4 hover:scale-105 shadow-2xl shadow-black rounded group duration-500 cursor-pointer '>
+          {/* <div className='bg-[#000000f4] text-white p-4 hover:scale-105 shadow-2xl shadow-black rounded group duration-500 cursor-pointer '>
             <div className='text-2xl uppercase '>Nexa Jubilee</div>
             <div className='group-hover:block lg:hidden duration-500'>
               <p>
@@ -238,26 +240,86 @@ const Outlets = () => {
                 </a>
               </div>
             </div>
+          </div> */}
+          <RiMapPin2Fill className='text-[300px]   ' />
+          <div className='p-7  bg-white bg-opacity-90   text-black  absolute text-center '>
+            <div className='text-2xl uppercase '>Nexa Jubilee</div>
+            <div className=' duration-500 text-sm'>
+              <div className=''>
+                1-65/5, 6,15 & 16 KKR Square,
+                <br /> Phase I Kavuri Hills Madhapur, Post,
+                <br /> Jubilee Hills,
+                <br /> Hyderabad, Telangana 500033.
+              </div>
+              <div className='flex flex-col items-center '>
+                <a href='tel:9848898488' className='flex items-center'>
+                  <RiPhoneFill className='mr-2' /> +91 98488 98488
+                </a>
+                <a
+                  href='mailto:info@saboomaruti.in'
+                  className='flex items-center italic'
+                >
+                  <FaEnvelope className='mr-2' /> info@saboomaruti.in
+                </a>
+                <a
+                  href='https://www.google.com/maps/place/NEXA/@17.439431,78.398485,14z/data=!4m5!3m4!1s0x0:0x1cb759ff5f828d3!8m2!3d17.4394309!4d78.398485?hl=en'
+                  className='flex items-center'
+                >
+                  <FaArrowRight className='mr-2' /> Direction
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          className='  flex justify-center items-center p-5  rounded-md shadow-2xl'
+        {/* <div className='  flex justify-center items-center  relative  '>
+          <FaMapMarker className='text-[300px] ' />
+          <div className='p-5 bg-white  text-black  absolute text-center '>
+            <div className='text-2xl uppercase '>Nexa Jubilee</div>
+            <div className=' duration-500 text-sm'>
+              <div className=''>
+                1-65/5, 6,15 & 16 KKR Square,
+                <br /> Phase I Kavuri Hills Madhapur, Post,
+                <br /> Jubilee Hills,
+                <br /> Hyderabad, Telangana 500033.
+              </div>
+              <div className='flex flex-col items-center '>
+                <a href='tel:9848898488' className='flex items-center'>
+                  <RiPhoneFill className='mr-2' /> +91 98488 98488
+                </a>
+                <a
+                  href='mailto:info@saboomaruti.in'
+                  className='flex items-center italic'
+                >
+                  <FaEnvelope className='mr-2' /> info@saboomaruti.in
+                </a>
+                <a
+                  href='https://www.google.com/maps/place/NEXA/@17.439431,78.398485,14z/data=!4m5!3m4!1s0x0:0x1cb759ff5f828d3!8m2!3d17.4394309!4d78.398485?hl=en'
+                  className='flex items-center'
+                >
+                  <FaArrowRight className='mr-2' /> Direction
+                </a>
+              </div>
+            </div>
+
+            
+          </div>
+        </div> */}
+       <div
+          className='    p-5  rounded-md shadow-2xl'
           style={{
             backgroundImage:
               'url("https://lh3.googleusercontent.com/p/AF1QipOcu7GCpu2tIt7zlZ_gl_xyDqT4uN7E_F7ym0RA=s680-w680-h510")',
           }}
         >
-          <div className='bg-[#000000f4] text-white p-4 hover:scale-105 shadow-2xl shadow-black rounded group duration-500 cursor-pointer '>
-            <div className='text-2xl uppercase '>
-              Nexa Hafeezpet
-            </div>
+          <div className='bg-[#000000f4]  text-white p-4 hover:scale-105 shadow-2xl shadow-black  text-center group duration-500 cursor-pointer '>
+            <div className='text-2xl uppercase '>Nexa Hafeezpet</div>
             <div className='group-hover:block lg:hidden duration-500'>
               <p>
                 Gachibowli - Miyapur Rd, Janapriya Nagar, Hafeezpet, Hyderabad,
                 Telangana 500049
               </p>
 
-              <div className='flex flex-col space-y-2'>
+              <div className='flex flex-col items-center space-y-2'>
                 <a href='tel:9848898488' className='flex items-center'>
                   <RiPhoneFill className='mr-2' /> +91 98488 98488
                 </a>
@@ -276,7 +338,7 @@ const Outlets = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   );

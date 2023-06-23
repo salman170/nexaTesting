@@ -12,6 +12,16 @@ const navigation = {
       name: 'Vehicles',
       featured: [
         {
+          name: 'COMING SOON',
+          brand_logo:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto+Logo-header.webp',
+          href: '/maruti-suzuki-new-invicto',
+          imageSrc:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Maruti_YDA_Website_Coming-Soon_370x252+C.webp',
+          imageAlt: 'Suzuki Fronx',
+          // price: '₹ 7,46,500*',
+        },
+        {
           name: 'Created to Inspire Style and Performance.',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp',
@@ -193,9 +203,9 @@ const carLinks = [
   },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ');
+// }
 
 function MainHeader() {
   const [open, setOpen] = useState(false);
@@ -295,7 +305,7 @@ function MainHeader() {
                 className='mt-2 lg:hidden '
                 onClick={() => setOpen(false)}
               >
-                <div className='border-b border-gray-200'>
+                {/* <div className='border-b border-gray-200'>
                   <Tab.List className='-mb-px flex px-4 space-x-8'>
                     {navigation.categories.map((category) => (
                       <Tab
@@ -313,7 +323,7 @@ function MainHeader() {
                       </Tab>
                     ))}
                   </Tab.List>
-                </div>
+                </div> */}
                 <Tab.Panels as={Fragment}>
                   {navigation.categories.map((category) => (
                     <Tab.Panel
@@ -437,7 +447,7 @@ function MainHeader() {
           {/* <nav aria-label='Top' className='container mx-auto '> */}
           <nav className=''>
             <div className='border-gray-200'>
-              <div className='h-20 px-3 flex justify-between items-center'>
+              <div className='h-16 lg:h-20 px-3 flex justify-between items-center'>
                 {/* Logo */}
                 
                 <div className='lg:flex  hidden '>
@@ -775,9 +785,11 @@ function MainHeader() {
           </nav>
         </header>
         <div
-          className=' bg-red-600  h-1   '
+        className=' bg-red-600   h-1   '
           style={{ width: `${scrollTop}%` }}
-        ></div>
+        >
+          {/* <div className='h-4 w-4 bg-gradient-to-l from-red-800 rounded-full animate-pulse'><img src={require("../../assets/icon11.png")} alt="" srcset="" /></div> */}
+        </div>
       </div>
       {/* </div> */}
     </div>
