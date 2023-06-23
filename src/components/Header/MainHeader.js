@@ -1,6 +1,8 @@
-import { Fragment, useState } from 'react';
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon, ChevronDownIcon } from '@heroicons/react/outline';
+import { Fragment, useEffect, useState } from 'react';
+import { Dialog, Tab, Transition } from '@headlessui/react';
+// import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+// import { MenuIcon, XIcon, ChevronDownIcon } from '@heroicons/react/outline';
 import { Link } from 'react-router-dom';
 
 const navigation = {
@@ -121,7 +123,7 @@ const navigation = {
       name: 'CNG',
       to: '/cng',
     },
-    
+
     {
       name: 'Careers',
       to: '/',
@@ -153,31 +155,107 @@ const navigation = {
   ],
 };
 
+const carLinks = [
+  {
+    name: 'Fronx',
+    link: '/maruti-fronx-price-in-hyderabad',
+    heading: 'Created to Inspire Style and Performance.',
+  },
+  {
+    name: 'Jimny',
+    link: '/maruti-jimny-price-in-hyderabad',
+    heading: 'Functional Beauty Crafted for Purity of Function.',
+  },
+  {
+    name: 'Grand Vitara',
+    link: '/grand-vitara-on-road-price-in-hyderabad',
+    heading: 'Create Inspire.',
+  },
+  {
+    name: 'XL6',
+    link: '/nexa-xl6-on-road-price-in-hyderabad',
+    heading: 'Created to Inspire Indulgence.',
+  },
+  {
+    name: 'Ciaz',
+    link: '/nexa-ciaz-on-road-price-in-hyderabad',
+    heading: 'Created to Inspire Elegance.',
+  },
+  {
+    name: 'Baleno',
+    link: '/new-maruti-baleno-price-in-hyderabad',
+    heading: 'Created to Inspire The Bold and Intelligent.',
+  },
+  {
+    name: 'Ignis',
+    link: '/nexa-ignis-on-road-price-in-hyderabad',
+    heading: 'Created to Inspire The Toughness in You.',
+  },
+];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 function MainHeader() {
-  const [navbar, setNavbar] = useState(false);
   const [open, setOpen] = useState(false);
-  const fixedNavbar = () => {
-    if (window.scrollY >= 100) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
+  const [scrollTop, setScrollTop] = useState(0);
+  // const [navbar, setNavbar] = useState(true)
+
+  // const onScroll = () => {
+  //   if (window.scrollY >= 100) {
+  //     setNavbar(true);
+  //   } else {
+  //     setNavbar(false);
+  //   }
+
+  //   const winScroll = document.documentElement.scrollTop;
+  //   const height =
+  //     document.documentElement.scrollHeight -
+  //     document.documentElement.clientHeight;
+  //   const scrolled = (winScroll / height) * 100;
+
+  //   setScrollTop(scrolled);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', onScroll);
+
+  //   return () => window.removeEventListener('scroll', onScroll);
+  // });
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.pageYOffset;
+  //     const isVisible =
+  //       prevScrollPos > currentScrollPos || currentScrollPos < 10;
+  //     setPrevScrollPos(currentScrollPos);
+  //     setVisible(isVisible);
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [prevScrollPos]);
+  const onScroll = () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+
+    setScrollTop(scrolled);
   };
-  window.addEventListener('scroll', fixedNavbar);
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  });
 
   return (
-    <div className={navbar ? 'bg-black px-0' : 'bg-black px-3'}>
+    <div className={'bg-[#0c0c0ce8]   duration-500 transition'}>
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog
-          as='div'
-          className='fixed inset-0 flex z-40 lg:hidden'
-          onClose={setOpen}
-        >
+        <Dialog as='div' className='fixed inset-0 flex z-40 ' onClose={setOpen}>
           <Transition.Child
             as={Fragment}
             enter='transition-opacity ease-linear duration-300'
@@ -200,7 +278,7 @@ function MainHeader() {
             leaveTo='-translate-x-full'
           >
             <div className='relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto'>
-              <div className='px-4 pt-5 pb-2 flex'>
+              <div className='px-4 pt-5 pb-2 lg:pb-4 flex'>
                 <button
                   type='button'
                   className='-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400'
@@ -214,7 +292,7 @@ function MainHeader() {
               {/* Links */}
               <Tab.Group
                 as='div'
-                className='mt-2'
+                className='mt-2 lg:hidden '
                 onClick={() => setOpen(false)}
               >
                 <div className='border-b border-gray-200'>
@@ -232,7 +310,6 @@ function MainHeader() {
                         }
                       >
                         {category.name}
-                      
                       </Tab>
                     ))}
                   </Tab.List>
@@ -275,7 +352,7 @@ function MainHeader() {
               </Tab.Group>
 
               <div
-                className='border-t border-gray-200 py-6 px-4 space-y-6'
+                className='border-t border-gray-200 py-6 px-4 space-y-4'
                 onClick={() => setOpen(false)}
               >
                 {navigation.pages.map((page) => (
@@ -297,7 +374,7 @@ function MainHeader() {
               </div>
 
               <div
-                className='border-t border-gray-200 py-6 px-4 space-y-6'
+                className='border-t border-gray-200 py-6 px-4 space-y-4'
                 onClick={() => setOpen(false)}
               >
                 {navigation.servicepages.map((page) => (
@@ -313,7 +390,7 @@ function MainHeader() {
               </div>
 
               <div
-                className='border-t border-gray-200 py-6 px-4 space-y-6'
+                className='border-t border-gray-200 py-6 px-4 space-y-4'
                 onClick={() => setOpen(false)}
               >
                 {navigation.outlets.map((page) => (
@@ -329,7 +406,7 @@ function MainHeader() {
               </div>
 
               <div
-                className='border-t border-gray-200 py-6 px-4 space-y-6'
+                className='border-t border-gray-200 py-6 px-4 space-y-4'
                 onClick={() => setOpen(false)}
               >
                 {navigation.more.map((page) => (
@@ -349,39 +426,50 @@ function MainHeader() {
       </Transition.Root>
 
       {/* Desktop, Tab Menu */}
-      <div
-        className={
-          navbar
-            ? 'fixed top-0 z-20 w-full px-0 shadow-2xl drop-shadow-2xl'
-            : ''
-        }
-      >
-        <header className='relative bg-black'>
-          <nav aria-label='Top' className='container mx-auto '>
-            <div className='border-gray-200'>
-              <div className='h-16 flex items-center'>
-                {/* Logo */}
-                <div className='mr-auto flex lg:ml-0 ml-2'>
-                  <Link to='/'>
-                    <img
-                      className='h-12 w-auto'
-                      src={require('../../assets/logo.webp')}
-                      alt='logo'
-                    />
-                  </Link>
-                </div>
 
+      <div
+        className={`fixed scroll-smooth z-20 backdrop-blur bg-[#0c0c0ce8]  w-full  shadow-2xl drop-shadow-2xl`}
+      >
+        {/* <div
+        className={`fixed scroll-smooth  ${navbar?"top-0":"md:top-14 "}  z-20  bg-[#0c0c0ce8]  w-full  shadow-2xl drop-shadow-2xl`}
+      > */}
+        <header className='relative container mx-auto text-gray-200'>
+          {/* <nav aria-label='Top' className='container mx-auto '> */}
+          <nav className=''>
+            <div className='border-gray-200'>
+              <div className='h-20 px-3 flex justify-between items-center'>
+                {/* Logo */}
+                
+                <div className='lg:flex  hidden '>
+                  
+                  <button
+                    className='  hover:bg-[#4d4d4d7a] p-4 transition-colors duration-100 rounded-md'
+                    onClick={() => setOpen(!open)}
+                  >
+                    {/* Menu */}
+                    <MenuIcon className='h-8 w-8    ' aria-hidden='true' />
+                  </button>
+                </div>
                 <button
                   type='button'
-                  className='p-2 rounded-md text-gray-200 lg:hidden'
+                  className='px-2 rounded-md text-gray-200 lg:hidden'
                   onClick={() => setOpen(true)}
                 >
                   <span className='sr-only'>Open menu</span>
                   <MenuIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
+                {/* <div className='  lg:ml-0 ml-2'>
+                  <Link to='/'>
+                    <img
+                      className='h-12 '
+                      src={require('../../assets/logo.webp')}
+                      alt='logo'
+                    />
+                  </Link>
+                </div> */}
 
                 {/* Flyout menus */}
-                <Popover.Group className='hidden ml-auto lg:block lg:self-stretch'>
+                {/* <Popover.Group className='hidden  lg:block lg:self-stretch'>
                   <div className='h-full flex space-x-8'>
                     {navigation.pages.map((page) => (
                       <Link
@@ -649,12 +737,49 @@ function MainHeader() {
                       </a>
                     </li>
                   </div>
-                </Popover.Group>
+                </Popover.Group> */}
+
+                <div className='transition-all hidden lg:flex '>
+                  {carLinks.map((car, index) => (
+                    // <div
+                    //   key={index}
+                    //   className='group'
+                    //   // onClick={() => setVeh(!veh)}
+                    //   // onMouseEnter={() => setVeh(true)}
+                    //   // onMouseLeave={() => setVeh(false)}
+                    // >
+                    <Link
+                      key={index}
+                      className='p-4 group hover:bg-[#4d4d4d7a]  rounded-md  '
+                      to={car.link}
+                    >
+                      {car.name}
+                    </Link>
+
+                    //  </div>
+                  ))}
+                </div>
+                <div className='  lg:ml-0 ml-2'>
+                  <Link to='/'>
+                    <img
+                      className='h-12 '
+                      src={require('../../assets/logo.webp')}
+                      alt='logo'
+                    />
+                  </Link>
+                </div>
+
+                
               </div>
             </div>
           </nav>
         </header>
+        <div
+          className=' bg-red-600  h-1   '
+          style={{ width: `${scrollTop}%` }}
+        ></div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

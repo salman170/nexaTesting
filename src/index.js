@@ -6,6 +6,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import compareSlice from './redux/compareSlice';
 import { Provider } from 'react-redux';
 import { products } from './constants';
+import "./index.css"
 
 const store = configureStore({
   reducer: {

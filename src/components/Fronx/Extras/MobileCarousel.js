@@ -1,15 +1,17 @@
-import React, { useRef, useState } from 'react';
+// import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+// import { Link, Route, Routes, useLocation } from 'react-router-dom';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Extras/styles.css';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Link } from 'react-router-dom';
 
 const MobileCarousel = () => {
   return (
@@ -49,7 +51,7 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp' alt="" srcset=""/>
             </Link>
             <figcaption class='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
@@ -64,7 +66,7 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp' alt="" srcset=""/>
             </Link>
             <figcaption class='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
@@ -79,7 +81,7 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp' alt="" srcset="" />
             </Link>
             <figcaption class='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl md-20'>
@@ -94,7 +96,7 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp' alt="" srcset=""/>
             </Link>
             <figcaption class='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
@@ -109,7 +111,7 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp' alt="" srcset=""/>
             </Link>
             <figcaption class='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>

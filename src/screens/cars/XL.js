@@ -67,7 +67,7 @@ function XL() {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/XL6.jpg'
         />
       </Helmet>
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/XL6-Banner.webp')] bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/XL6-Banner.webp')] bg-cover bg-no-repeat pt-28">
         <div className='max-w-6xl mx-auto'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-3'>
             <div className='my-auto mx-auto'>

@@ -13,10 +13,12 @@ import OnRoadPrice from '../../components/utils/OnRoadPrice';
 import { MdOutlineFileDownload } from 'react-icons/md';
 // import Carousel from '../../components/Fronx/Extras/Carousel';
 import MobileCarousel from '../../components/Fronx/Extras/MobileCarousel';
+import FronxSlider from '../../components/Fronx/Extras/FronxSlider';
 
 const width = window.innerWidth;
 
 const Fronx = () => {
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <Header />
@@ -69,13 +71,30 @@ const Fronx = () => {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/XL6.jpg'
         /> */}
       </Helmet>
-      {width > 425 ? <VariantPlayer /> : <MobileVariantPlayer />}
+      <div className='pt-20'>
+        {width > 425 ? <VariantPlayer /> : <MobileVariantPlayer />}
+      </div>
       {/* <VariantPlayer /> */}
-
       <FronxInteriorAndOther />
+     
       <OnRoadPrice title={'FRONX'} />
+      <div className='container text-center mx-auto mt-16 mb-8'>
+        <span className='text-2xl font-semibold'>DESIGN HIGHLIGHTS</span>
+      </div>
+      <div className='container mx-auto py-4 px-2  lg:px-0'>
+        <video
+          src={require('../../assets/ytb_video_desktop.mp4')}
+          autoPlay
+          loop
+          controls
+        ></video>
+      </div>
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className='hidden sm:block'>
+      <div className='container text-center mx-auto my-8'>
+        <span className='text-2xl font-semibold'>PERFORMANCE</span>
+        <br /> <span className='text-lg'>Born To Outperform, In Style</span>
+      </div>
+      <div className='hidden sm:block lg:container  mx-auto'>
         <div className='flex h-[60vh] bg-white gap-1 px-4 pt-1'>
           <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp')] ">
             <div className='flex flex-col justify-end h-full p-4 text-white '>
@@ -137,6 +156,159 @@ const Fronx = () => {
       <div className=' sm:hidden'>
         <MobileCarousel />
       </div>
+      <div className='container text-center mx-auto  mt-16 '>
+        <span className='text-2xl font-semibold'>TECHNOLOGY</span>
+        <br /> <span className='text-lg'>Feature Rich and Future Facing</span>
+      </div>
+      <div className='container mx-auto py-8 px-2 lg:px-0'>
+        <FronxSlider />
+      </div>
+      <div className='container text-center mx-auto  my-16 '>
+        <span className='text-2xl font-semibold'>SAFETY</span>
+        <br />
+        <span className='text-lg'>Reassurance of Safety on Every Drive</span>
+      </div>
+      <div className='container mx-auto flex justify-center items-center relative '>
+        <img
+          src={require('../../assets/SAFETY-979x485.webp')}
+          alt=''
+          srcset=''
+          className='m-28'
+        />
+        <div className='absolute right-[64%] top-0  lg:flex group hidden  '>
+          <div className='w-60 pr-3 text-xs text-right hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm'>SUZUKI-TECH BODY</span>
+            <br />
+            Suzuki’s Total Effective Control Technology (TECT) concept results
+            in effective absorption and dispersion of crash energy. The
+            effective use of high-tensile steel for major parts makes the body
+            light, strong and safe
+          </div>
+          <div className='hover:scale-105 flex justify-center items-center  w-20 h-20 border border-black rounded-full'>
+            <img
+              src={require('../../assets/icon11.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+        </div>
+        <div className='absolute left-[62%] top-16  lg:flex group hidden  '>
+          <div className='hover:scale-105 flex justify-center items-center  w-20 h-20  border border-black rounded-full'>
+            <img
+              src={require('../../assets/icon21.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+          <div className='w-60 mx-3 text-xs  hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm'>
+              SEAT BELT PRE-TENSIONERS WITH FORCE LIMITERS
+            </span>
+            <br />
+            Pre-tensioners restrain the passengers and Force Limiters prevent
+            seatbelt-inflicted injury.
+          </div>
+        </div>
+        <div className='absolute right-[10.33%] xl:right-[10.8%] bottom-[60%]  lg:flex lg:flex-col md:items-end group hidden  '>
+          <div className='w-60 py-3 text-xs text-right hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm'>
+              FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
+              SIDE IMPACT COMPLIANCE
+            </span>
+            <br />
+            Successfully tested and in compliance with international safety
+            norms.
+          </div>
+          <div className='hover:scale-105 flex justify-center  items-center  w-20 h-20  border border-black rounded-full'>
+            <img
+              src={require('../../assets/icon31.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+        </div>
+        <div className='absolute right-[10.33%] xl:right-[10.8%]  top-[44%] lg:flex lg:flex-col md:items-end group hidden  '>
+          <div className='hover:scale-105 flex justify-center  items-center  w-20 h-20  border border-black rounded-full'>
+            <img
+              src={require('../../assets/icon41.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+          <div className='w-60 py-3 text-xs text-right hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm'>
+              PEDESTRIAN PROTECTION COMPLIANCE
+            </span>
+            <br />
+            Ensuring safety, not only for the occupants, but pedestrians as
+            well.
+          </div>
+        </div>
+        <div className='absolute right-[47%] bottom-24  lg:flex group hidden  '>
+          <div className='w-60 pr-3 text-xs text-right hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm'>6 AIR BAGS</span>
+            <br />6 Air Bags to take the impact before it reaches you.
+          </div>
+          <div className='hover:scale-105 flex justify-center items-center  w-20 h-20 border border-black rounded-full '>
+            <img
+              src={require('../../assets/icon51.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+        </div>
+        <div className='absolute left-[19%] xl:left-[20%] top-[60%]  lg:flex lg:flex-col md:items-start group hidden  '>
+          <div className='hover:scale-105 flex justify-center  items-center  w-20 h-20  border border-black rounded-full'>
+            <img
+              src={require('../../assets/icon61.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+          <div className='w-60 py-3 text-xs text-left hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm uppercase'>
+              ABS WITH EBD
+            </span>
+            <br />
+            Anti-lock Braking System prevents the locking up of the wheels when
+            the brakes are applied under heavy loads while EBD ensures an
+            efficient and effective braking.
+          </div>
+        </div>
+        <div className='absolute left-[10.33%] xl:left-[10.8%] bottom-[60%]    lg:flex-col md:items-start group hidden lg:flex '>
+          <div className='w-60 py-3 text-xs text-left hidden group-hover:block backdrop-blur-md'>
+            <span className='font-semibold text-sm uppercase'>
+              ISOFIX CHILD SEAT ANCHORAGES
+            </span>
+            <br />
+            Standardized international child seat fitting system, for that
+            perfect drive with your little ones.
+          </div>
+          <div className='hover:scale-105 flex justify-center  items-center  w-20 h-20  border border-black rounded-full'>
+            <img
+              src={require('../../assets/icon71.png')}
+              alt=''
+              srcset=''
+              className=''
+            />
+          </div>
+        </div>
+        <div className='h-16 xl:h-24 absolute border top-20 right-[68%] border-black hidden lg:block'></div>
+        <div className='h-16 absolute border top-36 right-[34%] border-black hidden lg:block'></div>
+        <div className='w-48 absolute border top-52 right-[34%]  border-black hidden lg:block'></div>
+        <div className='w-24 xl:w-48 absolute border top-[15.5rem] right-[17%] hidden lg:block  border-black'></div>
+        <div className='w-24 xl:w-32 absolute border  right-[17%] hidden lg:block  border-black'></div>
+        <div className='h-48 absolute border bottom-44 right-[50%] border-black hidden lg:block'></div>
+        <div className='w-24 xl:w-32 absolute border  left-[22%] hidden lg:block  border-black'></div>
+        <div className='h-16 absolute border top-1/2 left-[22%] border-black hidden lg:block'></div>
+        <div className='w-24 xl:w-48 absolute border top-[15.5rem] left-[16%] hidden lg:block  border-black'></div>
+      </div>
     </>
   );
 };
@@ -159,7 +331,7 @@ function FronxInteriorAndOther() {
       </p>
       <Variant />
 
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/colors/flesh-color-bg.webp')] bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/colors/flesh-color-bg.webp')] bg-cover bg-no-repeat ">
         <div className='max-w-4xl mx-auto'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-2'>
             <a

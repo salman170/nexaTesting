@@ -61,7 +61,7 @@ function ImageViewer() {
         <div>
           <Tab.Panels>
             {/* Baleno 360° view  */}
-            <Tab.Panel>
+            <Tab.Panel className='relative mb-1'>
               <View360
                 path={
                   "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_baleno"
@@ -69,6 +69,9 @@ function ImageViewer() {
                 count={34}
                 format={"webp"}
               />
+              <img src="//nexaprod3.azureedge.net/-/media/feature/nexawebsitedegree360/360-view.webp?modified=20220119051203" alt="" srcset="" className="absolute top-6 left-6 hidden md:block" />
+              <img src="https://nexaprod.azureedge.net/dist/assets/images/left-arrow.webp" alt="" srcset="" className="absolute top-1/2 left-6 animate-pulse" />
+              <img src="https://nexaprod.azureedge.net/dist/assets/images/right-arrow.webp" alt="" srcset="" className="absolute top-1/2 right-6 animate-pulse" />
             </Tab.Panel>
 
             {/* exterior */}
@@ -95,7 +98,7 @@ function ImageViewer() {
 const Exterior = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <>
+    <div className="bg-[#00000087]">
       <Swiper
         spaceBetween={10}
         navigation={true}
@@ -132,7 +135,7 @@ const Exterior = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <div className="max-w-7xl mx-auto -mt-14">
+      <div className="max-w-7xl mx-auto  ">
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
@@ -140,7 +143,7 @@ const Exterior = () => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
+          className="mySwiper   "
         >
           <SwiperSlide>
             <img
@@ -172,14 +175,14 @@ const Exterior = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
 const Interior = () => {
   const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
-    <>
+    <div className="bg-[#00000087]">
       <Swiper
         spaceBetween={10}
         navigation={true}
@@ -223,7 +226,7 @@ const Interior = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <div className="max-w-7xl mx-auto -mt-10">
+      <div className="max-w-7xl mx-auto ">
         <Swiper
           onSwiper={setInteriorSwiper}
           spaceBetween={10}
@@ -270,7 +273,7 @@ const Interior = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -355,6 +355,7 @@ function App() {
       <ScrollTop />
       <Popup />
       <ToastContainer />
+  
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -379,7 +380,7 @@ function App() {
           path='/nexa-scross-petrol-on-road-price-in-hyderabad'
           element={<Scross />}
         />
-        <Route
+        <Route 
           path='/nexa-ciaz-on-road-price-in-hyderabad'
           element={<Ciaz />}
         />

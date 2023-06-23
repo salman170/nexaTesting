@@ -1,18 +1,22 @@
 import React from 'react';
-import Slider from '../../components/Home/Slider';
-import CarEnquiry from '../../components/Home/CarEnquiry';
+// import Slider from '../../components/Home/Slider';
+// import CarEnquiry from '../../components/Home/CarEnquiry';
 import Cars from '../../components/Home/Cars';
-import Blogs from '../../components/Home/Blogs';
+// import Blogs from '../../components/Home/Blogs';
 import ServiceFinanceInsu from '../../components/Home/ServiceFinanceInsu';
 import NewsLetter from '../../components/Home/NewsLetter';
-import MobileSlider from '../../components/Home/MobileSlider';
+// import MobileSlider from '../../components/Home/MobileSlider';
 import Helmet from 'react-helmet';
 import Header from '../../components/Header/Header';
 //confetti
-import Confetti from 'react-confetti';
+// import Confetti from 'react-confetti';
 import MobileCarousel from '../../components/Home/Mobile Carousel/MobileCarouselforHomePage';
+import CarEnq from '../../components/Home/CarEnq';
+import HomeSlide from '../../components/Home/HomeSlide';
+import News from '../../components/Home/News';
+import Mouse from '../../components/Home/Mouse';
 
-const width = window.innerWidth;
+// const width = window.innerWidth;
 
 function Home() {
   return (
@@ -63,12 +67,29 @@ function Home() {
         />
       </Helmet>
 
-      {width > 425 ? <VideoSlider /> : <MobileSlider />}
-      <CarEnquiry />
-      <Cars />
-      <Blogs />
-      {width > 425 ? <ServiceFinanceInsu /> : <MobileCarousel />}
+      <div className=''>
+        <VideoSlider />
+      </div>
+      {/* <div className='md:hidden'>
 
+   <MobileSlider />
+</div> */}
+      <CarEnq />
+      {/* <CarEnquiry /> */}
+      <HomeSlide />
+      <Cars />
+      <News />
+      {/* <Blogs /> */}
+      {/* {width > 425 ? <ServiceFinanceInsu /> : <MobileCarousel />} */}
+      <div className='md:hidden'>
+        <MobileCarousel />
+      </div>
+      <div className='hidden md:block'>
+        <ServiceFinanceInsu />
+      </div>
+      <div className=''>
+        <Mouse />
+      </div>
       <NewsLetter />
     </>
   );
@@ -77,14 +98,25 @@ function Home() {
 export const VideoSlider = () => {
   return (
     <div>
-      {' '}
-      <div className=''>
-        <video class='w-screen' autoplay='autoplay' loop muted>
+      <div className='top-0 left-0 w-full h-screen  '>
+        <video
+          className='w-full h-full object-cover '
+          preload='metadata'
+          loop
+          autoPlay
+          playsInline
+          muted
+        >
           <source
-            class='w-30 h-30'
+            // class='w-30 h-30'
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/video/Saboo+Nexa+Banner_2.mp4'
             type='video/mp4'
           />
+          {/* <source
+            type='video/mp4'
+            data-src='//nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/banner/jimny-1.mp4?modified=20230112000817'
+            src='//nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/banner/jimny-1.mp4?modified=20230112000817'
+          ></source> */}
         </video>
       </div>
     </div>

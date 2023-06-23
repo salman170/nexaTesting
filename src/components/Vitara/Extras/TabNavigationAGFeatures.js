@@ -1,8 +1,8 @@
 import { Tab } from '@headlessui/react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+// import { FreeMode, Navigation, Thumbs } from 'swiper';
 
 function TabNavigationAGFeatures() {
   return (
@@ -90,7 +90,7 @@ function TabNavigationAGFeatures() {
 }
 
 const FourWheelDrive = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
@@ -117,7 +117,7 @@ const FourWheelDrive = () => {
 };
 
 const SVDControl = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
@@ -143,7 +143,7 @@ const SVDControl = () => {
   );
 };
 const ESP = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
@@ -167,7 +167,7 @@ const ESP = () => {
   );
 };
 const PowerTrainControl = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>

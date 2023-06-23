@@ -8,13 +8,13 @@ import EnquiryPopup from '../utils/EnquiryPopup';
 
 function Cars() {
   return (
-    <div className='container mx-auto px-5 lg:px-0 md:px-3'>
+    <div className=' px-5 container mx-auto  md:px-3 lg:px-0'>
       <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-2'>
         <div className='space-y-3'>
-          <p className='uppercase font-bold text-4xl'>nexa cars</p>
-          <p className='uppercase font-bold text-md tracking-wider'>
+          <p className='uppercase font-medium text-5xl lg:text-6xl'>nexa cars</p>
+          {/* <p className='uppercase font-bold text-md tracking-wider'>
             What's happening at NEXA
-          </p>
+          </p> */}
           <p className='text-lg font-light'>
             Saboo RKS, the premier Nexa dealer in Hyderabad, prides itself on
             innovative solutions that revolutionize the driving experience,
@@ -39,7 +39,7 @@ const VehicleProducts = () => {
 
   return (
     <>
-      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto pb-5'>
+      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4  pb-5'>
         {products.map((item) => (
           <div
             className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden'

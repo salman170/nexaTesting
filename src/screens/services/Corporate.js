@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet';
 
 const Corporate = () => {
-  const notify = () => toast('your email client will be opened');
+  // const notify = () => toast('your email client will be opened');
   const [phone, setPhone] = useState('');
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {

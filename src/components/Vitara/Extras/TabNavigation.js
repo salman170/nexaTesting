@@ -1,8 +1,8 @@
 import { Tab } from '@headlessui/react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+// import { FreeMode, Navigation, Thumbs } from 'swiper';
 
 function TabNavigationIH() {
   return (
@@ -89,7 +89,7 @@ function TabNavigationIH() {
 }
 
 const ElectricDrive = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
@@ -116,7 +116,7 @@ const ElectricDrive = () => {
 };
 
 const HybridDrive = () => {
-  const [interiorSwiper, setInteriorSwiper] = useState(null);
+  // const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
@@ -144,7 +144,7 @@ const HybridDrive = () => {
 };
 
 const EngineDrive = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
@@ -169,7 +169,7 @@ const EngineDrive = () => {
   );
 };
 const RegenerativeBraking = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>

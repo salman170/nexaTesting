@@ -1,6 +1,6 @@
 import Header from '../../Header/Header';
-import { Link } from 'react-router-dom';
-import React, { useRef, useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Helmet from 'react-helmet';
 // Import Swiper styles
@@ -12,8 +12,8 @@ import '../Extras/styles.css';
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
 
-import Carousel from '../Extras/Carousel';
-import TabNavigation from '../Extras/TabNavigation';
+// import Carousel from '../Extras/Carousel';
+// import TabNavigation from '../Extras/TabNavigation';
 import TabNavigationMT from '../Extras/TabNavigationMT';
 
 const VitaraMT = () => {
@@ -105,28 +105,28 @@ const VitaraMT = () => {
           className='mySwiper'
         >
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Front+Sliding+Armrest+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Front+Sliding+Armrest+webp.webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Power+Button+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Power+Button+webp.webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Rear+AC+Vents+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Rear+AC+Vents+webp.webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Boot+Space+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Boot+Space+webp.webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Projector+Headlamps+webp+(1).webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Projector+Headlamps+webp+(1).webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/LED+Tail+Lamps+webp+(1).webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/LED+Tail+Lamps+webp+(1).webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/R17+Dual+Tone+Precision+Cut+Alloy+Wheels+webp+(1).webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/R17+Dual+Tone+Precision+Cut+Alloy+Wheels+webp+(1).webp' alt="" srcset=""/>
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/DRLs+webp+(1).webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/DRLs+webp+(1).webp' alt="" srcset=""/>
           </SwiperSlide>
         </Swiper>
         <ManualTransmission />

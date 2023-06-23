@@ -61,7 +61,7 @@ function ImageViewer() {
         <div>
           <Tab.Panels>
             {/* Ciaz 360° view  */}
-            <Tab.Panel>
+            <Tab.Panel className='relative mb-1'>
               <View360
                 path={
                   "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ciaz/360"
@@ -69,6 +69,9 @@ function ImageViewer() {
                 count={36}
                 format={"jpg"}
               />
+              <img src="//nexaprod3.azureedge.net/-/media/feature/nexawebsitedegree360/360-view.webp?modified=20220119051203" alt="" srcset="" className="absolute top-6 left-6 hidden md:block" />
+              <img src="https://nexaprod.azureedge.net/dist/assets/images/left-arrow.webp" alt="" srcset="" className="absolute top-1/2 left-6 animate-pulse" />
+              <img src="https://nexaprod.azureedge.net/dist/assets/images/right-arrow.webp" alt="" srcset="" className="absolute top-1/2 right-6 animate-pulse" />
             </Tab.Panel>
 
             {/* exterior */}
@@ -95,13 +98,13 @@ function ImageViewer() {
 const Exterior = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <>
+    <div className="bg-[#00000087]">
       <Swiper
         spaceBetween={10}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        className="mySwiper2 "
       >
         <SwiperSlide>
           <img
@@ -147,7 +150,7 @@ const Exterior = () => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
+          className="mySwiper mt-14"
         >
           <SwiperSlide>
             <img
@@ -186,14 +189,14 @@ const Exterior = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
 const Interior = () => {
   const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
-    <>
+    <div className="bg-[#00000087]">
       <Swiper
         spaceBetween={10}
         navigation={true}
@@ -287,7 +290,7 @@ const Interior = () => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
+          className="mySwiper mt-10"
         >
           <SwiperSlide>
             <img
@@ -368,7 +371,7 @@ const Interior = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
