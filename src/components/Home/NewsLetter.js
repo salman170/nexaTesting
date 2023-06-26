@@ -1,7 +1,7 @@
 import React from 'react';
 import { RiStarFill, RiStarHalfFill, RiPhoneFill } from 'react-icons/ri';
 import { FaEnvelope, FaArrowRight } from 'react-icons/fa';
-import { RiMapPin2Fill } from 'react-icons/ri';
+// import { RiMapPin2Fill } from 'react-icons/ri';
 // import { FaMapMarker } from 'react-icons/fa';
 import { BsQuote } from 'react-icons/bs';
 
@@ -175,7 +175,7 @@ const Outlets = () => {
       </p>*/}
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 h-max md:h-72 '>
         <div
-          className='   space-y-2 p-5  rounded-md shadow-2xl'
+          className='    p-5  rounded-md shadow-2xl'
           style={{
             backgroundImage:
               'url("https://lh3.googleusercontent.com/p/AF1QipMLEnk0MYFn9tcAINhNpWSNcEHzQkPD_2YmFMo8=s680-w680-h510")',
@@ -209,13 +209,13 @@ const Outlets = () => {
           </div>
         </div>
         <div
-          className='  flex justify-center items-center  relative  '
-          // style={{
-          //   backgroundImage:
-          //     'url("https://hyperlocalcd2.azureedge.net/-/media/images/feature/nexa/site-specific-global-content/r/rks-motors/rks-motors-jubilee/content-with-image/homepage-aboutus_rks_nexa_jublihills.ashx?modified=20181122052457")',
-          // }}
+          className=' p-5 rounded-md shadow-2xl relative '
+          style={{
+            backgroundImage:
+              'url("https://hyperlocalcd2.azureedge.net/-/media/images/feature/nexa/site-specific-global-content/r/rks-motors/rks-motors-jubilee/content-with-image/homepage-aboutus_rks_nexa_jublihills.ashx?modified=20181122052457")',
+          }}
         >
-          {/* <div className='bg-[#000000f4] text-white p-4 hover:scale-105 shadow-2xl shadow-black rounded group duration-500 cursor-pointer '>
+         <div className='bg-[#000000f4] text-white p-4 hover:scale-105 shadow-2xl shadow-black rounded group duration-500 cursor-pointer '>
             <div className='text-2xl uppercase '>Nexa Jubilee</div>
             <div className='group-hover:block lg:hidden duration-500'>
               <p>
@@ -240,8 +240,8 @@ const Outlets = () => {
                 </a>
               </div>
             </div>
-          </div> */}
-          <RiMapPin2Fill className='text-[300px]   ' />
+          </div> 
+          {/* <RiMapPin2Fill className='text-[300px]   ' />
           <div className='p-7  bg-white bg-opacity-90   text-black  absolute text-center '>
             <div className='text-2xl uppercase '>Nexa Jubilee</div>
             <div className=' duration-500 text-sm'>
@@ -269,7 +269,7 @@ const Outlets = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* <div className='  flex justify-center items-center  relative  '>
           <FaMapMarker className='text-[300px] ' />

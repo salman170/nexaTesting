@@ -8,7 +8,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
-import './range.css';
+// import './range.css';
 
 // import required modules
 import { EffectFade, FreeMode, Navigation, Thumbs } from 'swiper';
@@ -82,17 +82,25 @@ export default function Slider() {
     },
   ];
 
+  let timeoutId = null; // Declare a variable to store the timeout ID
+
   const handleClick = (index) => {
+    // Clear previous timer if it exists
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    // Set the new timer
     swiperRef.current.swiper.slideTo(index);
-    console.log("hiiio45545")
     setPlay(true);
-    // const timer = setTimeout(() => {
-    //   setPlay(false);
-    // }, 2000);
+
+    timeoutId = setTimeout(() => {
+      setPlay(false);
+    }, 2000);
   };
 
   // useEffect(() => {
-  //   console.log("hiiio")
+  //   // console.log("hiiio")
   //   setPlay(true);
   //   const timer = setTimeout(() => {
   //     setPlay(false);
@@ -104,7 +112,7 @@ export default function Slider() {
   // }, [thumbsSwiper]);
 
   return (
-    <div className='hidden lg:block '>
+    <div className='hidden lg:block bg-gradient-to-r '>
       <div className='xl:-mb-16  '>
         <Swiper
           style={{
@@ -119,7 +127,8 @@ export default function Slider() {
           slidesPerView={1}
           freeMode={false}
           modules={[FreeMode, EffectFade, Navigation, Thumbs]}
-          className='mySwiper2'
+          className='h-[50vh] -mb-48'
+          // className='mySwiper2'
           speed={1500}
           // autoplayDisableOnInteraction={false}
           // autoplay={{  disableOnInteraction: false }} // Autoplay with a delay of 3000ms (3 seconds)
@@ -131,7 +140,7 @@ export default function Slider() {
               alt=''
               className=''
             />
-            <div className='absolute  text-white '>
+            <div className='absolute top-24 text-white '>
               <span className='text-4xl lg:text-6xl'>Jimny </span>
               <br />
               <div>
@@ -145,7 +154,7 @@ export default function Slider() {
               src={require('../../assets/cq5dam.web.1400.10000 (1).jpeg')}
               alt=''
             />
-            <div className='absolute  text-white '>
+            <div className='absolute top-24 text-white '>
               <span className='text-4xl lg:text-6xl'>Fronx </span>
               <br />
               <div>
@@ -171,7 +180,7 @@ export default function Slider() {
               alt=''
             />
 
-            <div className='absolute  text-white '>
+            <div className='absolute top-24 text-white '>
               <span className='text-4xl lg:text-6xl'>XL6 </span>
               <br />
               <div>
@@ -196,7 +205,7 @@ export default function Slider() {
               src={require('../../assets/cq5dam.web.1400.10000 (4).jpeg')}
               alt=''
             />
-            <div className='absolute  text-white '>
+            <div className='absolute top-24 text-white '>
               <span className='text-4xl lg:text-6xl'>Baleno </span>
               <br />
               <div>
@@ -210,7 +219,7 @@ export default function Slider() {
               src={require('../../assets/cq5dam.web.1400.10000 (5).jpeg')}
               alt=''
             />
-            <div className='absolute  text-white '>
+            <div className='absolute top-24 text-white '>
               <span className='text-4xl lg:text-6xl'>Ignis</span>
               <br />
               <div>
@@ -235,7 +244,7 @@ export default function Slider() {
         centeredSlides={true}
         // grabCursor={true}
         // className='carSlider flex items-center '
-        className='mySwiper -mt-24'
+        className='h-auto  '
         // autoplay={{ delay: 3500, disableOnInteraction: true }} // Autoplay with a delay of 3000ms (3 seconds)
         // breakpoints={{
         //   640: {
@@ -261,7 +270,7 @@ export default function Slider() {
           >
             <div to={car.link} className='focus:outline-none'>
               {play ? (
-               <video
+                <video
                   src='https://maserati.scene7.com/is/content/maserati/maserati/international/model-page/animation/forward/Levante2-1-vp9-chrome.webm'
                   loop
                   autoPlay
@@ -269,20 +278,20 @@ export default function Slider() {
                 ></video>
               ) : (
                 <div>
-                {index % 2 === 0 ? (
-                  <img
-                    src={require('../../assets/Slider_01.png')}
-                    className='slider_car'
-                    alt=''
-                  />
-                ) : (
-                  <img
-                    src={require('../../assets/Slider_02.png')}
-                    className='slider_car'
-                    alt='alto'
-                  />
-                )}
-              </div>
+                  {index % 2 === 0 ? (
+                    <img
+                      src={require('../../assets/Slider_01.png')}
+                      className='slider_car'
+                      alt=''
+                    />
+                  ) : (
+                    <img
+                      src={require('../../assets/Slider_02.png')}
+                      className='slider_car'
+                      alt='alto'
+                    />
+                  )}
+                </div>
               )}
               {/* <img
                 src={car.logo}

@@ -449,9 +449,8 @@ function MainHeader() {
             <div className='border-gray-200'>
               <div className='h-16 lg:h-20 px-3 flex justify-between items-center'>
                 {/* Logo */}
-                
+
                 <div className='lg:flex  hidden '>
-                  
                   <button
                     className='  hover:bg-[#4d4d4d7a] p-4 transition-colors duration-100 rounded-md'
                     onClick={() => setOpen(!open)}
@@ -778,20 +777,17 @@ function MainHeader() {
                     />
                   </Link>
                 </div>
-
-                
               </div>
             </div>
           </nav>
         </header>
         <div
-        className=' bg-red-600   h-1   '
+          className=' bg-red-600 flex justify-end  h-1  shadow-xl shadow-white '
           style={{ width: `${scrollTop}%` }}
         >
-          {/* <div className='h-4 w-4 bg-gradient-to-l from-red-800 rounded-full animate-pulse'><img src={require("../../assets/icon11.png")} alt="" srcset="" /></div> */}
+          <div className='h-1 w-1 bg-gradient-to-l from-red-900  animate-pulse'></div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 }
